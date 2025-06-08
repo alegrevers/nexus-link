@@ -1,6 +1,10 @@
+FROM n8nio/n8n
+
 services:
   n8n:
-    image: n8nio/n8n
+    # Você pode usar "image" diretamente ou "build" com o Dockerfile simples
+    # build: . # Se usar "build: ." o Dockerfile simples acima será lido
+    image: n8nio/n8n # Se você usar "image" diretamente, o Dockerfile não será usado
     ports:
       - "5678:5678"
     environment:
